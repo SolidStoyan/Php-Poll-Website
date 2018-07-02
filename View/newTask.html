@@ -1,0 +1,78 @@
+<head>
+    <style>
+        .pagination {
+            display: inline-block;
+        }
+
+        .pagination a {
+            color: black;
+            float: left;
+            padding: 8px 16px;
+            text-decoration: none;
+        }
+
+        .pagination a.active {
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px;
+        }
+
+        .pagination a:hover:not(.active) {
+            background-color: #ddd;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<p style="margin-left: 40%">Please,choose a category:</p>
+<!-- <form style="margin-left: 40%" method="post"> -->
+    <select style="margin-left: 40%" name="question_category" id="dropdown">
+        <option value="1">History</option>
+        <option value="2">Computers</option>
+        <option value="3">General Knowledge</option>
+    </select>
+    <br><br>
+    <input type="submit" style="margin-left: 40%" name="sendButton" value="SELECT" onclick="loadData()">
+    
+
+
+<div class="containerTwo" style="margin-left: 37%">
+        <div class="checkbox" style="margin-top: 2%"><label id="questionLabel">THIS IS WHERE THE QUESTION GOES
+        </label>
+        </div><br>
+       <div  class="questionContainer">
+            <input type="radio" id="AnswerA" name="answer" value = "0" onclick="getAnswer()">
+           	<label for="AnswerA" id="TextA">ANSWER A</label>
+       </div>
+       <br><br>
+        <div class="questionContainer">
+            <input type="radio" id="AnswerB" name="answer" value = "1" onclick="getAnswer()">
+            <label for="AnswerB" id="TextB">ANSWER B</label>
+        </div>
+        <br><br>
+        <div class="questionContainer">
+            <input type="radio" id="AnswerC" name="answer" checked value = "2" onclick="getAnswer()">
+            <label for="AnswerC" id="TextC">ANSWER C</label>
+        </div>
+        <br><br>
+        <div class="questionContainer">
+            <input type="radio" id="AnswerD" name="answer" value = "3" onclick="getAnswer()">
+            <label for="AnswerD" id="TextD">ANSWER D</label>
+        </div>
+        <br><br>
+        
+        <div class="pagination" style="margin-left: 8%">
+        <a onclick="leftShift()">&laquo;</a>
+        <a onclick="rightShift()">&raquo;</a>
+    	</div><br><br><br><br>
+       <ul class='pagination'>
+       </ul>
+    <input style="width: 30%;color: white;background-color: darkblue" type="submit" value="SUBMIT" name="submitButton" onclick="showResults()">
+</div>
+<br><br>
+
+<div id="textField" style="margin-left: 0%;text-align: center;font-size: 120%;font-family: Arial; border: 15px solid #ccc;"></div>
+
+<script src="../View/js/ajaxPoll.js"></script>
+
+

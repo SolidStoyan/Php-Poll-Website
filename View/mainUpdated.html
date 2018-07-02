@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main</title>
+    
+</head>
+<body>
+<br><br><br> 
+	<div id="welcomeMessage">
+	Welcome to the site. If you would like to change the category and questions you will be showed, please select a category below and click the SELECT button. If not, go straight to the new poll.
+	 </div>
+	 <br><br><br> 
+	<div id="categorySelect" style="margin-left: 40%">Please,choose a category:</div>
+	<br><br>
+<form action="../Controller/questionController.php" method="post">
+    <select style="margin-left: 40%" name="data_category" id="dropdown2">
+        <option value="1">History</option>
+        <option value="2">Computers</option>
+        <option value="3">General Knowledge</option>
+    </select>
+    <br><br>
+    <input type="submit" style="margin-left: 40%" name="sendCategory" value="UPDATE">
+    </form>
+    <br><br><br><br>
+    <div style="margin-left: 30%; margin-right: 30%; text-align: center; font-size: 120%;" >Category successfully updated! </div>
+
+</body>
+</html>
+
